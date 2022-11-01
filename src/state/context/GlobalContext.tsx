@@ -26,6 +26,31 @@ const initialState: StateType = {
 export const GlobalContextProvider = ({ children }: ContextProviderProps) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
+  useEffect(() => {
+    const fetchProducts = async () => {
+      dispatch(initFetch());
+      try {
+        const response = await fetch(state.url);
+        const products = await response.json();
+        dispatch(fetchSuccess(products));
+      } catch (error) {
+        dispatch(fetchError());
+      }
+    };
+    fetchProducts();
+  }, [state.url]);
+
+  useEffect(() => {
+    const fetchCategories = async () => {
+      const response = await fetch(
+        "https://fakestoreapi.com/products/categories"
+      );
+      const categories = await response.json();
+      dispatch(setCategories(categories));
+    };
+    fetchCategories();
+  }, [state.categories]);
+
   return (
     <GlobalContext.Provider value={{ state, dispatch }}>
       {children}
