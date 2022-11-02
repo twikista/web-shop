@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Web-Shop online store
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+An e-commerce app based on the fakestore api
 
 ## Available Scripts
 
