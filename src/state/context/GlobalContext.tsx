@@ -19,6 +19,8 @@ const initialState: StateType = {
   products: [],
   categories: [],
   cart: [],
+  totalCartQuantity: 0,
+  totalCartAmount: 0,
   isLoading: false,
   isError: false,
 };
@@ -49,7 +51,7 @@ export const GlobalContextProvider = ({ children }: ContextProviderProps) => {
       dispatch(setCategories(categories));
     };
     fetchCategories();
-  }, [state.categories]);
+  }, []);
 
   return (
     <GlobalContext.Provider value={{ state, dispatch }}>

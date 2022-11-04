@@ -61,6 +61,8 @@ export type CartType = {
 export type StateType = {
   url: StringType;
   cart: CartType[];
+  totalCartQuantity: number;
+  totalCartAmount: number;
   products: ProductType[];
   categories: CategoriesType;
   isLoading: boolean;
