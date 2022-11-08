@@ -21,7 +21,8 @@ export const GlobalStyle = createGlobalStyle`
 
     .App{
       display: grid;
-      grid-template-rows: 75.39px 1fr 15.94px;
+      grid-template-columns: 1fr;
+      grid-template-rows: 75.39px 1fr 50px;
       min-height: 100vh;
       /* background-color: #f5f5f5; */
       background-color: #fffffe;
