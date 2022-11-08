@@ -1,5 +1,5 @@
 import React from "react";
-import { FaGithub, FaGithubAlt, FaLinkedinIn, FaTwitter } from "react-icons/fa";
+import { FaLinkedinIn, FaTwitter } from "react-icons/fa";
 import { FiGithub } from "react-icons/fi";
 import {
   Socials,
