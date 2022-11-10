@@ -2,12 +2,12 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const StyledFooter = styled.footer`
-  color: #f0f5fd;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 2rem 1rem;
-  box-shadow: 0px 2px 6px 6px rgba(0, 0, 0, 0.09);
+  border-top: solid 2px #2b7d8f;
+  background-color: #2b7d8f; ;
 `;
 
 export const Socials = styled.ul`
@@ -29,6 +29,7 @@ export const SocialsIconWrapper = styled(Link)`
   width: 30px;
   height: 30px;
   border: solid 2px #023846;
+  /* border: solid 2px #022a31; */
   border-radius: 50%;
   padding: 0.5rem;
   color: #023846;
