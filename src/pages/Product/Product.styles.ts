@@ -108,6 +108,9 @@ export const PriceWrapper = styled.div`
   text-align: left;
   display: flex;
   flex-direction: column;
+  @media (max-width: 480px) {
+    margin-bottom: 1.5rem;
+  }
 `;
 
 export const ProductDetails = styled.div`

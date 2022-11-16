@@ -8,7 +8,6 @@ export const reducer = (state: StateType, action: Action): StateType => {
 Handle success data fectch
 */
   if (action.type === "FETCH SUCCESS") {
-    console.log(state);
     return {
       ...state,
       isLoading: false,
@@ -28,8 +27,45 @@ Hanadle data fetch error
   }
 
   if (action.type === "SET API URL") {
-    console.log(action.payload);
     return { ...state, url: action.payload };
+  }
+  if (action.type === "ADD ITEM") {
+    console.log("clicked", state.cart);
+    const { id, quantity: quanty, price } = action.payload;
+    console.log(action.payload);
+    if (state.cart.find((item) => item.id === id) === undefined) {
+      return {
+        ...state,
+        cart: [...state.cart, { id, quantity: quanty, price }],
+      };
+    } else {
+      const newCart = state.cart.map((item) => {
+        if (item.id === id) {
+          return { ...item, quantity: item.quantity + quanty };
+        } else {
+          return item;
+        }
+      });
+      return { ...state, cart: newCart };
+    }
+  }
+  //decrease cart
+  if (action.type === "DECREASE ITEM") {
+    const id = action.payload;
+    const { cart } = state;
+    if (cart.find((item) => item.id === id)?.quantity === 1) {
+      const newCart = cart.filter((item) => item.id !== id);
+      return { ...state, cart: newCart };
+    } else {
+      const newCart = state.cart.map((item) => {
+        if (item.id === id) {
+          return { ...item, quantity: item.quantity - 1 };
+        } else {
+          return item;
+        }
+      });
+      return { ...state, cart: newCart };
+    }
   }
   return state;
 };
