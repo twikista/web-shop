@@ -54,8 +54,9 @@ export type Action =
   | SetCategories;
 
 export type CartType = {
-  id?: NumberType;
-  quantity: NumberType | StringType;
+  id: NumberType;
+  quantity: NumberType;
+  price: NumberType;
 };
 
 export type StateType = {

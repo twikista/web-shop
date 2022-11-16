@@ -1,7 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
     *, ::after,::before{
         margin: 0;
         padding: 0;
@@ -15,7 +14,7 @@ export const GlobalStyle = createGlobalStyle`
 
     body{
         font-size: 1.6rem;
-        font-family: 'PT Sans', sans-serif;
+        font-family: 'Roboto Condensed', sans-serif;
 
     }
 
@@ -60,3 +59,7 @@ export const GlobalStyle = createGlobalStyle`
     background-color: transparent;
   }
 `;
+
+/*font-family: 'Raleway', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Roboto Condensed', sans-serif;*/
