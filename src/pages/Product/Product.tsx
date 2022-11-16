@@ -106,7 +106,6 @@ export const Product = () => {
           </ProductDetailsBottom>
         </ProductDetails>
       </MainContent>
-      {/* <SimilarProducts id={+`${productId}`} category={`${product?.category}`} /> */}
     </ProductContainer>
   );
 };

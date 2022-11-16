@@ -11,9 +11,7 @@ export type ButtonProps = {
 
 export const ProductContainer = styled.section`
   width: 90%;
-  /* border: solid blue 1px; */
   min-height: calc(100vh - 75.39px - 50px);
-  /* min-height: 100vh; */
   margin-top: 2rem;
   margin-bottom: 3rem;
   margin-left: auto;
@@ -25,7 +23,6 @@ export const ProductContainer = styled.section`
   background-color: #fffffe;
   font-size: 1.6rem;
   @media (max-width: 480px) {
-    /* width: 100%; */
   }
 `;
 
@@ -43,7 +40,6 @@ export const MainContent = styled.section`
 
   @media (max-width: 480px) {
     grid-template-rows: 350px 1fr;
-    /* grid-template-columns: 90%; */
   }
 `;
 
@@ -52,22 +48,15 @@ export const ImageWrapper = styled.div`
   align-items: center;
   justify-content: center;
   width: min-max(250px, 100%);
-  /* height: 70%; */
-  /* border: solid purple 1px; */
-  /* margin: auto 0; */
   height: 100%;
 `;
 
 export const ProductImage = styled.img`
   width: 80%;
-  /* min-width: 300px; */
   height: 100%;
   object-fit: contain;
   object-position: auto 0;
-  /*border: solid 2px green;
-  display: inline-block;*/
   margin: 0 auto;
-  /* justify-content: center; */
   @media (max-width: 860px) {
     /* object-position: 0 0; */
   }
@@ -93,9 +82,7 @@ export const TitleWrapper = styled.div`
   display: flex;
   align-items: flex-end;
   text-align: left;
-  /* margin-bottom: 1rem; */
   padding-bottom: 0.5rem;
-  /* margin-top: 1rem; */
 `;
 
 export const LabelText = styled.span`
@@ -107,8 +94,6 @@ export const LabelText = styled.span`
   @media (max-width: 480px) {
     font-size: 1.8rem;
   }
-
-  /* display: block; */
 `;
 
 export const PriceText = styled.div`
@@ -128,13 +113,10 @@ export const PriceWrapper = styled.div`
 export const ProductDetails = styled.div`
   display: flex;
   flex-direction: column;
-  /* margin-top: 4rem; */
   height: 100%;
-  /* border: solid purple 2px; */
   padding: 1rem 1.5rem;
 `;
 export const ProductDetailsTop = styled.div`
-  /* border: solid red 1px; */
   height: 30%;
   display: flex;
   flex-direction: column;
@@ -142,7 +124,6 @@ export const ProductDetailsTop = styled.div`
 `;
 
 export const ProductDetailsBottom = styled.div`
-  /* border: solid pink 1px; */
   display: flex;
   flex-direction: column;
   height: 70%;
@@ -174,30 +155,22 @@ export const ProductDescription = styled.div`
 export const ActionsWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
   width: 100%;
-  /* border: solid yellowgreen 1px; */
 `;
 
 export const QuantityWrapper = styled.div`
   text-align: left;
   margin-top: 3rem;
   color: #023846;
-  /* @media (max-width: 480px) {
-    font-size: 1.8rem;
-  } */
-  /* border: solid hotpink 1px; */
 `;
 
 export const Button = styled.button`
-  /* border: solid #d7d7d7 1px; */
   padding: 14px 5px;
   transition: all 0.2s ease-in;
 
   &:hover {
     color: ${(props: ButtonProps) =>
       props.action === "increase" ? "#07d407" : "#f05108"};
-    /* font-weight: 700; */
     transform: scale(1.5);
   }
 `;
@@ -205,7 +178,6 @@ export const Input = styled.input`
   padding: 14px 5px;
   text-align: center;
   color: #011a20;
-  /* width: 40px; */
 `;
 
 export const QuantityInput = styled.div`
@@ -214,11 +186,9 @@ export const QuantityInput = styled.div`
   border: solid #d7d7d7 1px;
   width: 300px;
   font-size: 1.8rem;
-  /* padding: 1.5rem 0; */
   margin-top: 0.5rem;
   @media (max-width: 860px) {
     grid-template-columns: 0.25fr 1fr 0.25fr;
-    /* padding: 0 2rem; */
     width: 100%;
   }
   @media (max-width: 480px) {
@@ -233,7 +203,6 @@ export const AddToCartButton = styled.button`
   text-align: center;
   padding: 14px 0;
   background-color: #f26323;
-  /* background-color: #2b7d8f; */
   color: #fff;
   margin-top: 1rem;
   font-size: 1.8rem;
@@ -241,18 +210,14 @@ export const AddToCartButton = styled.button`
   text-transform: capitalize;
   transition: all 0.3s ease;
   &:hover {
-    /* border: solid 2px #f26323; */
     color: #f26323;
     color: #fff;
     background-color: teal;
   }
   @media (max-width: 860px) {
-    /* grid-template-rows: 350px 1fr; */
     width: 100%;
   }
   @media (max-width: 480px) {
-    /* grid-template-rows: 350px 1fr; */
-    width: 100%;
     font-size: 1.6rem;
   }
 `;

@@ -27,5 +27,9 @@ Hanadle data fetch error
     return { ...state, categories: ["all", ...action.payload] };
   }
 
+  if (action.type === "SET API URL") {
+    console.log(action.payload);
+    return { ...state, url: action.payload };
+  }
   return state;
 };
