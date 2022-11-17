@@ -29,7 +29,7 @@ export type AddToCartAction = {
 };
 
 export type ActionsWithNoPayload = {
-  type: "INIT FETCH" | "FETCH ERROR" | "CLEAR CART";
+  type: "INIT FETCH" | "FETCH ERROR" | "CLEAR CART" | "UPDATE CART TOTALS";
 };
 export type ModifyCartActions = {
   type: "REMOVE ITEM" | "INCREASE ITEM" | "DECREASE ITEM";

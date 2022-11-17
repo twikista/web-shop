@@ -67,5 +67,25 @@ Hanadle data fetch error
       return { ...state, cart: newCart };
     }
   }
+
+  if (action.type === "UPDATE CART TOTALS") {
+    const { quantityTotal, priceTotal } = state.cart.reduce(
+      (totalQuantity, item) => {
+        const { quantity, price } = item;
+        totalQuantity.quantityTotal += quantity;
+        const amount = price * quantity;
+        totalQuantity.priceTotal += amount;
+        return totalQuantity;
+      },
+      { quantityTotal: 0, priceTotal: 0 }
+    );
+    console.log(quantityTotal, priceTotal);
+    return {
+      ...state,
+      totalCartQuantity: quantityTotal,
+      totalCartAmount: priceTotal,
+    };
+  }
+
   return state;
 };

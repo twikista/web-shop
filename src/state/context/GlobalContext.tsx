@@ -4,6 +4,7 @@ import {
   fetchSuccess,
   fetchError,
   setCategories,
+  updateCartTotals,
 } from "../reducers/actionCreators";
 import {
   ContextType,
@@ -52,6 +53,11 @@ export const GlobalContextProvider = ({ children }: ContextProviderProps) => {
     };
     fetchCategories();
   }, []);
+
+  useEffect(() => {
+    dispatch(updateCartTotals());
+    console.log("cart total ran");
+  }, [state.cart]);
 
   return (
     <GlobalContext.Provider value={{ state, dispatch }}>

@@ -48,3 +48,6 @@ export const increaseItem = (payload: number): ModifyCartActions => {
 export const decreaseItem = (payload: number): ModifyCartActions => {
   return { type: "DECREASE ITEM", payload: payload };
 };
+export const updateCartTotals = (): ActionsWithNoPayload => {
+  return { type: "UPDATE CART TOTALS" };
+};
