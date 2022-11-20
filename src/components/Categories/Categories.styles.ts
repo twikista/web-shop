@@ -5,19 +5,9 @@ export const CategoryWrapper = styled.nav`
   overflow-x: scroll;
   overflow-y: hidden;
   white-space: nowrap;
-  /* display: flex;
-  justify-content: center;
-  align-items: center;*/
-  /* justify-content: space-around; */
-  /*width: 100%;
-  flex-wrap: nowrap;
-  overflow-x: auto; */
   -webkit-overflow-scrolling: touch;
-  /* border: solid 1px red; */
-  /* border-radius: 8px; */
-  /* max-width: 420px; */
   margin: auto auto;
-  /* width: 100%; */
+  /* border: solid red 1px; */
 
   &::-webkit-scrollbar {
     display: none;
@@ -25,9 +15,8 @@ export const CategoryWrapper = styled.nav`
 
   @media (max-width: 520px) {
     width: 90%;
-    /* font-size: 12px; */
-    /* padding: 0 1rem; */
-    /* margin: 0 5px; */
+    /* padding-left: 10px;
+    padding-right: 10px; */
   }
 `;
 

@@ -86,6 +86,15 @@ Hanadle data fetch error
       totalCartAmount: priceTotal,
     };
   }
+  if (action.type === "TOGGLE CART") {
+    console.log(!state.cartIsOpen);
+    console.log(action.payload);
+    return {
+      ...state,
+      cartIsOpen: !state.cartIsOpen,
+      previousPath: action.payload,
+    };
+  }
 
   return state;
 };
