@@ -57,8 +57,11 @@ export const ProductImage = styled.img`
   object-fit: contain;
   object-position: auto 0;
   margin: 0 auto;
-  @media (max-width: 860px) {
-    /* object-position: 0 0; */
+  @media (max-width: 480px) {
+    /* object-position: auto auto; */
+    /* object-fit: cover; */
+    /* width: 95%; */
+    /* min-width: 200px; */
   }
 `;
 
@@ -110,6 +113,7 @@ export const PriceWrapper = styled.div`
   flex-direction: column;
   @media (max-width: 480px) {
     margin-bottom: 1.5rem;
+    justify-content: flex-start;
   }
 `;
 
@@ -124,6 +128,9 @@ export const ProductDetailsTop = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  @media (max-width: 480px) {
+    height: 20%;
+  }
 `;
 
 export const ProductDetailsBottom = styled.div`
@@ -132,6 +139,7 @@ export const ProductDetailsBottom = styled.div`
   height: 70%;
   @media (max-width: 480px) {
     flex-direction: column-reverse;
+    height: 80%;
   }
 `;
 

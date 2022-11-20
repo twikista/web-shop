@@ -45,13 +45,19 @@ export type SetCategories = {
   payload: CategoriesType;
 };
 
+export type ToggleCartType = {
+  type: "TOGGLE CART";
+  payload: StringType;
+};
+
 export type Action =
   | ActionsWithNoPayload
   | FetchSuccess
   | AddToCartAction
   | ModifyCartActions
   | SetApiUrlType
-  | SetCategories;
+  | SetCategories
+  | ToggleCartType;
 
 export type CartType = {
   id: NumberType;
@@ -68,6 +74,8 @@ export type StateType = {
   categories: CategoriesType;
   isLoading: boolean;
   isError: boolean;
+  cartIsOpen: boolean;
+  previousPath: StringType;
 };
 
 export type ContextType = {

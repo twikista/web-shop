@@ -24,6 +24,8 @@ const initialState: StateType = {
   totalCartAmount: 0,
   isLoading: false,
   isError: false,
+  cartIsOpen: false,
+  previousPath: "",
 };
 
 export const GlobalContextProvider = ({ children }: ContextProviderProps) => {

@@ -9,6 +9,7 @@ import {
   StringType,
   SetCategories,
   CategoriesType,
+  ToggleCartType,
 } from "./types/types";
 
 //prodcut action creators
@@ -50,4 +51,8 @@ export const decreaseItem = (payload: number): ModifyCartActions => {
 };
 export const updateCartTotals = (): ActionsWithNoPayload => {
   return { type: "UPDATE CART TOTALS" };
+};
+
+export const toggleCart = (payload: string): ToggleCartType => {
+  return { type: "TOGGLE CART", payload: payload };
 };

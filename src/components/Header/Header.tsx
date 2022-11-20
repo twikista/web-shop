@@ -8,7 +8,7 @@ import {
   HeaderBottom,
   LogoContainer,
 } from "./Header.styles";
-import { Cart } from "../Cart/Cart";
+import { Cart } from "../CartWidget/CartWidget";
 // import { Categories } from "../Categories/Categories";
 import { Link, useLocation } from "react-router-dom";
 
