@@ -32,10 +32,13 @@ export const ProductTitleWrapper = styled.div`
   font-size: 1.6rem;
   height: 60%;
   display: flex;
-  align-items: flex-start;
+  align-items: baseline;
   padding: 0.5rem 1rem;
+  /* border-top: solid #d7d7d7 1px; */
+  /* border-bottom: solid #d7d7d7 1px; */
   @media (max-width: 480px) {
     font-size: 1.4rem;
+    align-items: center;
   }
 
   @media (max-width: 360px) {
@@ -44,17 +47,22 @@ export const ProductTitleWrapper = styled.div`
 `;
 
 export const ProductTitle = styled.span`
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: 400;
   color: #023846;
+  @media (max-width: 480px) {
+    font-size: 1.6rem;
+  }
 `;
 
 export const PriceWrapper = styled.div`
   height: 40%;
   line-height: 2;
   padding: 0 1rem 0.5rem 1rem;
+  /* border-top: solid #d7d7d7 1px; */
   display: flex;
   align-items: flex-start;
+  /* justify-content: center; */
 `;
 
 export const Price = styled.span`
@@ -62,11 +70,11 @@ export const Price = styled.span`
   font-weight: 700;
   color: #f26323;
   @media (max-width: 480px) {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
 
   @media (max-width: 360px) {
-    font-size: 1.4rem;
+    /* font-size: 1.4rem; */
   }
 `;
 
