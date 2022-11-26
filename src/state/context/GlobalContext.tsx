@@ -10,7 +10,6 @@ import {
   ContextType,
   ContextProviderProps,
   StateType,
-  StringType,
 } from "../reducers/types/types";
 import { reducer } from "../reducers/reducer";
 

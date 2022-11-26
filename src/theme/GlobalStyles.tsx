@@ -59,7 +59,3 @@ export const GlobalStyle = createGlobalStyle`
     background-color: transparent;
   }
 `;
-
-/*font-family: 'Raleway', sans-serif;
-font-family: 'Roboto', sans-serif;
-font-family: 'Roboto Condensed', sans-serif;*/

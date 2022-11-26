@@ -1,9 +1,5 @@
 import styled from "styled-components";
 
-type ItemProps = {
-  displayDirection: string;
-};
-
 export const MinicartOverlay = styled.div`
   width: 100%;
   position: absolute;
