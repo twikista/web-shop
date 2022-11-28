@@ -34,10 +34,9 @@ export const Home = () => {
       setSliderIndex((sliderIndex) =>
         sliderIndex < sliderData.length - 1 ? sliderIndex + 1 : 0
       );
-      console.log(sliderIndex);
     }, 5000);
     return () => clearInterval(interval);
-  }, []);
+  }, [sliderIndex]);
 
   return (
     <Container>
