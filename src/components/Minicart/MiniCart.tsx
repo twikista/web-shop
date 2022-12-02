@@ -1,14 +1,16 @@
 import React from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AiOutlineClose } from "react-icons/ai";
 import { useGlobalContext } from "../../state/context/GlobalContext";
 import { setPrevPath } from "../../utils/setPreviouspath";
 import { toggleCart } from "../../state/reducers/actionCreators";
 import {
+  CartButton,
   CloseMinicartBtn,
   EmptyCartMessage,
   HeaderItems,
   MinicartContainer,
+  MiniCartFooter,
   MinicartHeader,
   MinicartHeading,
   MiniCartItems,
@@ -20,6 +22,7 @@ import { Button } from "../ActionButton/ActionButton.styles";
 
 export const MiniCart = () => {
   const { pathname } = useLocation();
+  const navigate = useNavigate();
   const {
     dispatch,
     state: { cart, cartIsOpen },
@@ -65,6 +68,19 @@ export const MiniCart = () => {
               return <CartItem key={item.id} {...item} />;
             })}
           </MiniCartItems>
+        )}
+        {cart.length !== 0 && (
+          <MiniCartFooter>
+            <CartButton
+              onClick={() => {
+                navigate("cart");
+                dispatch(toggleCart(setPrevPath(cartIsOpen, pathname)));
+              }}
+            >
+              view cart
+            </CartButton>
+            <CartButton>checkout</CartButton>
+          </MiniCartFooter>
         )}
       </MinicartContainer>
     </MinicartOverlay>

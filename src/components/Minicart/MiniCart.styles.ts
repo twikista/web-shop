@@ -16,19 +16,16 @@ export const MinicartOverlay = styled.div`
 export const MinicartContainer = styled.section`
   display: flex;
   flex-direction: column;
-  /* grid-template-columns: 32rem; //remove later */
 
   width: 32rem;
   margin-top: 0.3rem;
   margin-right: 0.8rem;
-  /* border: solid red 2px; */
   background-color: #fff;
   height: fit-content;
   max-height: 560px;
   overflow-y: auto;
   @media (max-width: 480px) {
     width: 100%;
-    /* grid-template-columns: 1fr; */
     margin-left: auto;
     margin-right: auto;
     margin-top: 0.5rem;
@@ -53,10 +50,7 @@ export const HeaderItems = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  /* gap: 1rem; */
   position: relative;
-  /* border: solid red 2px; */
-  /* margin: 0 1rem; */
 `;
 
 export const MinicartHeading = styled.h4`
@@ -72,7 +66,6 @@ export const CloseMinicartBtn = styled.button`
   position: absolute;
   right: 0;
   top: 10px;
-  /* border: solid red 1px; */
   svg {
     color: grey;
     &:hover {
@@ -91,8 +84,6 @@ export const MiniCartItems = styled.div`
   margin: 0 auto;
   justify-content: center;
   margin-bottom: 1rem;
-
-  /* border: solid blue 1px; */
 `;
 
 export const EmptyCartMessage = styled.div`
@@ -102,10 +93,26 @@ export const EmptyCartMessage = styled.div`
   gap: 1rem;
   justify-content: center;
   align-items: center;
-  /* border: dashed 2px #ccd7da; */
   border-radius: 2px;
   margin: 0 1rem 2rem 1rem;
   p {
     color: #b4b4b4;
   }
+`;
+
+export const MiniCartFooter = styled.article`
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 1rem auto 1rem auto;
+  gap: 1rem;
+`;
+
+export const CartButton = styled.button`
+  padding: 1rem;
+  background-color: #1bc415;
+  width: 50%;
+  color: #fff;
+  font-weight: 700;
+  text-transform: capitalize;
 `;
