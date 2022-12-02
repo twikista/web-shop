@@ -8,16 +8,11 @@ import {
   Container,
   HeaderItem,
   HeadingText,
-  ImageWrapper,
   Nav,
   PageTitle,
-  Product,
-  ProductImage,
   TitleWrapper,
 } from "./Cart.styles";
-import { AiFillBackward } from "react-icons/ai";
 import { useGlobalContext } from "../../state/context/GlobalContext";
-import { CartItemWrapper } from "./CartItem/CartItem.styles";
 import { CartItem } from "./CartItem/CartItem";
 
 export const Cart = () => {
