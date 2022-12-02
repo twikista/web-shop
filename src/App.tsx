@@ -7,6 +7,7 @@ import { Contact } from "./pages/Contact/Contact";
 import { Product } from "./pages/Product/Product";
 import { GlobalStyle } from "./theme/GlobalStyles";
 import { Footer } from "./components/Footer/Footer";
+import { Cart } from "./pages/Cart/Cart";
 
 function App() {
   return (
@@ -16,13 +17,13 @@ function App() {
       <Main>
         <Routes>
           <Route path="/" element={<Home />} />
-          {/* <Route path="/products" element={<Products />} /> */}
           <Route path="/products/:activeCategory" element={<Products />} />
           <Route
             path="/products/:activeCategory/:productId"
             element={<Product />}
           />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/cart" element={<Cart />} />
         </Routes>
       </Main>
       <Footer />
