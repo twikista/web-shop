@@ -68,6 +68,13 @@ Hanadle data fetch error
     }
   }
 
+  if (action.type === "REMOVE ITEM") {
+    const id = action.payload;
+    const { cart } = state;
+    const newCart = cart.filter((item) => item.id !== id);
+    return { ...state, cart: newCart };
+  }
+
   if (action.type === "UPDATE CART TOTALS") {
     const { quantityTotal, priceTotal } = state.cart.reduce(
       (totalQuantity, item) => {
