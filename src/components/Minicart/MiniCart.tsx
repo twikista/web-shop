@@ -19,6 +19,7 @@ import {
 import { CartItem } from "../CartItem/CartItem";
 import { EmptyCartIcon } from "../EmptyCartIcon/EmptyCartIcon";
 import { Button } from "../ActionButton/ActionButton.styles";
+// import { EmptyCartMessage } from "../EmptyCartMessage/EmptyCartMessage";
 
 export const MiniCart = () => {
   const { pathname } = useLocation();
@@ -63,6 +64,7 @@ export const MiniCart = () => {
             </Button>
           </EmptyCartMessage>
         ) : (
+          // <EmptyCartMessage pathname={pathname} />
           <MiniCartItems>
             {cart.map((item) => {
               return <CartItem key={item.id} {...item} />;
