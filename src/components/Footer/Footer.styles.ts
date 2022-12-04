@@ -23,7 +23,7 @@ export const Socials = styled.ul`
 
 export const SocialsItem = styled.li``;
 
-export const SocialsIconWrapper = styled(Link)`
+export const SocialsLink = styled.a`
   display: flex;
   align-items: center;
   width: 30px;

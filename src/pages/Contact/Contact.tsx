@@ -2,7 +2,9 @@ import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { formSchema, FormType } from "./FormSchema/formSchema";
+import { AiOutlineClose } from "react-icons/ai";
 import {
+  CloseBtn,
   ContactForm,
   Container,
   FormField,
@@ -11,14 +13,14 @@ import {
   NameWrapper,
   PageHeading,
   SubmitBtutton,
-  Successful,
+  SubmitSuccessMessage,
   TextArea,
   ValidationMessage,
   Wrapper,
 } from "./Contact.styles";
 
 export const Contact = () => {
-  const [successMessage, setSuccessMessage] = useState("");
+  const [isMessageSent, setIsMessageSent] = useState(false);
   const {
     register,
     handleSubmit,
@@ -30,35 +32,33 @@ export const Contact = () => {
 
   const onSubmit = (data: FormType) => {
     console.log(data);
-    setSuccessMessage("message sent. Thank you");
+    setIsMessageSent(true);
     reset();
   };
 
   useEffect(() => {
     const messageTimeout = setTimeout(() => {
-      setSuccessMessage("");
-    }, 3000);
+      setIsMessageSent(false);
+    }, 5000);
     return () => clearTimeout(messageTimeout);
-  }, [successMessage]);
+  }, [isMessageSent]);
   return (
     <Container>
       <PageHeading>contact us</PageHeading>
       <Wrapper>
-        <ContactForm onSubmit={handleSubmit(onSubmit)}>
-          <Successful>
-            <span
-              style={{
-                color: "green",
-                // textAlign: "center",
-                position: "absolute",
-                top: "1rem",
-                display: "flex",
-                justifyContent: "center",
-              }}
-            >
-              {successMessage}
-            </span>
-          </Successful>
+        <ContactForm onSubmit={handleSubmit(onSubmit)} padding={isMessageSent}>
+          {isMessageSent && (
+            <SubmitSuccessMessage>
+              <span>Message sent. Thank you</span>
+              <CloseBtn
+                onClick={() => {
+                  setIsMessageSent(false);
+                }}
+              >
+                <AiOutlineClose />
+              </CloseBtn>
+            </SubmitSuccessMessage>
+          )}
           <FormField>
             <Label htmlFor="subject">
               <Input

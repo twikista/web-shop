@@ -1,8 +1,9 @@
 import styled from "styled-components";
 
-type ValidateColorType = {
+type ValidateType = {
   color?: string;
   borderSize?: string;
+  padding?: boolean;
 };
 
 export const Container = styled.div`
@@ -39,46 +40,69 @@ export const Wrapper = styled.div`
   flex: 1;
 `;
 
-export const LeftWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
-
-export const RightWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  border: solid red 2px;
-`;
 export const ContactForm = styled.form`
   display: flex;
   flex-direction: column;
   width: 90%;
   max-width: 600px;
   border: solid #c9c9c9 1px;
-  padding: 5rem 2rem 3rem;
+  padding: ${({ padding }: ValidateType) => (padding ? "2rem" : "5rem")} 2rem
+    3rem;
   margin: 3rem auto 0 auto;
   border-radius: 5px;
   height: fit-content;
   color: #888;
-  position: relative;
   @media (max-width: 860px) {
     max-width: none;
     width: 95%;
   }
   @media (max-width: 480px) {
-    padding: 5rem 1.5rem 3rem;
+    padding: ${({ padding }: ValidateType) => (padding ? "2rem" : "5rem")}
+      1.5rem 3rem;
   }
   @media (max-width: 380px) {
-    padding: 5rem 1rem 3rem;
+    padding: ${({ padding }: ValidateType) => (padding ? "2rem" : "5rem")} 1rem
+      3rem;
   }
 `;
 
-export const Successful = styled.div`
+export const SubmitSuccessMessage = styled.div`
   display: flex;
   justify-content: center;
-  /* width: 90%;
-  background-color: green; */
+  align-items: center;
+  width: 100%;
+  position: relative;
+  font-weight: 700;
+  word-spacing: 1px;
+  background-color: #00e677;
+  color: #fff;
+  padding: 0.8rem 0;
+  margin: 1rem auto 2rem auto;
+  border-radius: 3px;
+  @media (max-width: 480px) {
+    font-size: 1.4rem;
+  }
+`;
+
+export const CloseBtn = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  color: #fff;
+  position: absolute;
+  right: 1.8rem;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 3px;
+  &:hover {
+    background-color: #fff;
+    color: #ff6347;
+    border-radius: 3px;
+  }
+  @media (max-width: 480px) {
+    font-size: 1.5rem;
+  }
 `;
 
 export const NameWrapper = styled.div`
@@ -104,8 +128,8 @@ export const Label = styled.label`
 export const Input = styled.input`
   display: block;
   border-style: solid;
-  border-width: ${({ borderSize }: ValidateColorType) => borderSize || "1px"};
-  border-color: ${({ color }: ValidateColorType) => color || "#c9c9c9"};
+  border-width: ${({ borderSize }: ValidateType) => borderSize || "1px"};
+  border-color: ${({ color }: ValidateType) => color || "#c9c9c9"};
   padding: 8px 10px;
   border-radius: 3px;
   width: 100%;
@@ -114,6 +138,10 @@ export const Input = styled.input`
   @media (max-width: 380px) {
     font-size: 1.4rem;
   }
+  &:focus {
+    border-width: 2px;
+  }
+
   &::placeholder {
     color: #555;
     @media (max-width: 380px) {
@@ -125,14 +153,17 @@ export const Input = styled.input`
 export const TextArea = styled.textarea`
   padding: 8px 10px;
   border-style: solid;
-  border-width: ${({ borderSize }: ValidateColorType) => borderSize || "1px"};
-  border-color: ${({ color }: ValidateColorType) => color || "#c9c9c9"};
+  border-width: ${({ borderSize }: ValidateType) => borderSize || "1px"};
+  border-color: ${({ color }: ValidateType) => color || "#c9c9c9"};
   width: 100%;
   border-radius: 3px;
   appearance: none;
   height: 250px;
   @media (max-width: 380px) {
     font-size: 1.4rem;
+  }
+  &:focus {
+    border-width: 2px;
   }
   &::placeholder {
     color: #555;

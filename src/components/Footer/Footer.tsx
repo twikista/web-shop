@@ -3,7 +3,7 @@ import { FaLinkedinIn, FaTwitter } from "react-icons/fa";
 import { FiGithub } from "react-icons/fi";
 import {
   Socials,
-  SocialsIconWrapper,
+  SocialsLink,
   SocialsItem,
   StyledFooter,
 } from "./Footer.styles";
@@ -12,9 +12,9 @@ export const Footer = () => {
   const socialsIcon = (svgIcon: JSX.Element, link: string) => {
     return (
       <SocialsItem>
-        <SocialsIconWrapper to={link} target="blank">
+        <SocialsLink rel="external" href={link} target="blank">
           {svgIcon}
-        </SocialsIconWrapper>
+        </SocialsLink>
       </SocialsItem>
     );
   };
