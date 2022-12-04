@@ -4,21 +4,27 @@ import { toggleCart } from "../../state/reducers/actionCreators";
 import { setPrevPath } from "../../utils/setPreviouspath";
 import { Button } from "../ActionButton/ActionButton.styles";
 import { EmptyCartIcon } from "../EmptyCartIcon/EmptyCartIcon";
-import { MessageWrapper } from "./EmptyCartMessage.styles";
+import { MessageWrapper, Text } from "./EmptyCartMessage.styles";
 
 type PathnameType = {
   pathname: string;
+  marginTop?: string;
+  fontSize?: string;
 };
 
-export const EmptyCartMessage = ({ pathname }: PathnameType) => {
+export const EmptyCartMessage = ({
+  pathname,
+  marginTop,
+  fontSize,
+}: PathnameType) => {
   const {
     dispatch,
     state: { cartIsOpen },
   } = useGlobalContext();
   return (
-    <MessageWrapper>
+    <MessageWrapper marginTop={marginTop}>
       <EmptyCartIcon />
-      <p>Your cart is Empty</p>
+      <Text fontSize={fontSize}>Your cart is Empty</Text>
       <Button
         as={Link}
         to={"/products/all"}

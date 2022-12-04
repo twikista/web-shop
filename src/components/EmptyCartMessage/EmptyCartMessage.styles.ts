@@ -1,5 +1,11 @@
 import styled from "styled-components";
 
+type WrapperType = {
+  position?: string;
+  marginTop?: string;
+  fontSize?: string;
+};
+
 export const MessageWrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -8,8 +14,13 @@ export const MessageWrapper = styled.div`
   justify-content: center;
   align-items: center;
   border-radius: 2px;
-  margin: 0 1rem 2rem 1rem;
-  p {
-    color: #b4b4b4;
+  margin: ${({ marginTop }: WrapperType) => marginTop || 0} 1rem 2rem 1rem;
+`;
+
+export const Text = styled.p`
+  font-size: ${({ fontSize }: WrapperType) => fontSize};
+  color: #b4b4b4;
+  @media (max-width: 480px) {
+    font-size: 1.8rem;
   }
 `;

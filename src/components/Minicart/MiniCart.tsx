@@ -7,7 +7,7 @@ import { toggleCart } from "../../state/reducers/actionCreators";
 import {
   CartButton,
   CloseMinicartBtn,
-  EmptyCartMessage,
+  // EmptyCartMessage,
   HeaderItems,
   MinicartContainer,
   MiniCartFooter,
@@ -19,7 +19,7 @@ import {
 import { CartItem } from "../CartItem/CartItem";
 import { EmptyCartIcon } from "../EmptyCartIcon/EmptyCartIcon";
 import { Button } from "../ActionButton/ActionButton.styles";
-// import { EmptyCartMessage } from "../EmptyCartMessage/EmptyCartMessage";
+import { EmptyCartMessage } from "../EmptyCartMessage/EmptyCartMessage";
 
 export const MiniCart = () => {
   const { pathname } = useLocation();
@@ -49,20 +49,21 @@ export const MiniCart = () => {
           </HeaderItems>
         </MinicartHeader>
         {cart.length === 0 ? (
-          <EmptyCartMessage>
-            <EmptyCartIcon />
-            <p>Your cart is Empty</p>
-            <Button
-              as={Link}
-              to={"/products/all"}
-              marginTop="0"
-              height="4rem"
-              width="12rem"
-              borderColor="rgb(214, 40, 40)"
-            >
-              go to shop
-            </Button>
-          </EmptyCartMessage>
+          // <EmptyCartMessage>
+          //   <EmptyCartIcon />
+          //   <p>Your cart is Empty</p>
+          //   <Button
+          //     as={Link}
+          //     to={"/products/all"}
+          //     marginTop="0"
+          //     height="4rem"
+          //     width="12rem"
+          //     borderColor="rgb(214, 40, 40)"
+          //   >
+          //     go to shop
+          //   </Button>
+          // </EmptyCartMessage>
+          <EmptyCartMessage pathname={pathname} />
         ) : (
           // <EmptyCartMessage pathname={pathname} />
           <MiniCartItems>
