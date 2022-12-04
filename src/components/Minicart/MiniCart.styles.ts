@@ -110,7 +110,7 @@ export const MiniCartFooter = styled.article`
 
 export const CartButton = styled.button`
   padding: 1rem;
-  background-color: #1bc415;
+  background-color: #00e677;
   width: 50%;
   color: #fff;
   font-weight: 700;

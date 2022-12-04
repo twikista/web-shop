@@ -8,14 +8,9 @@ type Props = {
 
 export const HeaderWrapper = styled.header`
   display: flex;
-  /* flex-direction: column; */
   align-items: center;
   justify-content: center;
-  /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8); */
-  /* background-color: blueviolet; */
   color: #f0f5fd;
-  /* gap: 1rem; */
-  /* border-bottom: 2px #fff solid; */
   width: 100%;
   padding: ${({ path }: Props) =>
     path === "/" ? "0.5rem 3rem" : "1.5rem 3rem"};
@@ -24,14 +19,9 @@ export const HeaderWrapper = styled.header`
   @media (max-width: 600px) {
     padding: 0 1rem;
   }
-
-  /* @media (max-width: 420px) {
-    max-height: 50px;
-  } */
 `;
 
 export const LogoContainer = styled(Link)`
-  /* border: #ffab00 solid 2px; */
   flex: 1;
   display: flex;
   justify-content: flex-start;
@@ -41,9 +31,8 @@ export const LogoContainer = styled(Link)`
   }
 `;
 export const Logo = styled.span`
-  color: "#ebedf0";
+  color: #2b7d8f;
   width: 70px;
-  /* height: 25px; */
   font-size: 2.5rem;
   font-weight: 700;
   span {
@@ -52,7 +41,6 @@ export const Logo = styled.span`
   }
   @media (max-width: 680px) {
     font-size: 2rem;
-    /* height: 32px; */
   }
 
   @media (max-width: 420px) {
@@ -67,18 +55,12 @@ export const HeaderTop = styled.div`
   display: flex;
   position: relative;
   align-items: center;
-  /* border: solid blue 1px; */
-  /* flex: 1; */
   justify-content: space-between;
   width: inherit;
   align-items: center;
   width: 100%;
-  /* max-height: 50px; */
   gap: 1rem;
   padding: 1rem 0;
-  /* @media (max-width: 420px) {
-    max-height: 40px;
-  } */
 `;
 
 export const HeaderBottom = styled.div`

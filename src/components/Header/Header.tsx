@@ -20,7 +20,7 @@ export const Header = () => {
       <HeaderTop>
         <LogoContainer to="/">
           <Logo>
-            web<Span>shop</Span>
+            Web<Span>Mart</Span>
           </Logo>
         </LogoContainer>
         <MenuWrapper>
