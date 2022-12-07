@@ -1,4 +1,4 @@
-import { Link, Path } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useGlobalContext } from "../../state/context/GlobalContext";
 import { toggleCart } from "../../state/reducers/actionCreators";
 import { setPrevPath } from "../../utils/setPreviouspath";

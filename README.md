@@ -1,46 +1,53 @@
-# Web-Shop online store
+# Web-Mart
 
-An e-commerce app based on the fakestore api
+Web-Mart is a frontend implemntation of the [faskestore](https://fakestoreapi.com/) e-commerce REST Api. At the top level, the app utilizes the native fetch API to retrieve data from the server (backend) and then uses React.js to implement the user interface. The app features a home page, products page, product page, contact page, and cart page.
 
-## Available Scripts
+## Table of contents
 
-In the project directory, you can run:
+- [Features](#implemented-features)
+- [Tecnology used](#technology-used)
+- [Tools](#tools)
+- [Setup](#setup)
+- [Usage](#usage)
 
-### `npm start`
+## Implemented Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Custom and scaleable image slider
+- Responsive Web Design (RWD)
+- Minicart which provides quick summary of items in cart
+- Dynamic cart badge that displays number of items in cart
+-
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Technology Used
 
-### `npm test`
+- Typescript: implement static types
+- React:
+- React Context: used to manage application wide state
+- React Router: used to implement app routes
+- React Hook Form: To manage form state and enforce client-side valaidation
+- Styled Components: to create re-usable styled elements & prevent name-space conflict
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Tools
 
-### `npm run build`
+- create-react-app
+- git & github
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Setup
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+To run this application locally:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Clone this repo
 
-### `npm run eject`
+```bash
+$ git clone https://github.com/twikista/web-shop.git
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+2. Go the root of the cloned repo and install dependencies
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+$ cd web-shop && npm install
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Usage
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+To start the application, run ` npm start` to start the development server at http://localhost:3000/

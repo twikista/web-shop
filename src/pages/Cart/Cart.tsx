@@ -14,7 +14,6 @@ import {
 } from "./Cart.styles";
 import { useGlobalContext } from "../../state/context/GlobalContext";
 import { CartItem } from "./CartItem/CartItem";
-import { EmptyCartIcon } from "../../components/EmptyCartIcon/EmptyCartIcon";
 import { EmptyCartMessage } from "../../components/EmptyCartMessage/EmptyCartMessage";
 
 export const Cart = () => {
