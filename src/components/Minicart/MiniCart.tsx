@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { AiOutlineClose } from "react-icons/ai";
 import { useGlobalContext } from "../../state/context/GlobalContext";
 import { setPrevPath } from "../../utils/setPreviouspath";
@@ -7,7 +7,6 @@ import { toggleCart } from "../../state/reducers/actionCreators";
 import {
   CartButton,
   CloseMinicartBtn,
-  // EmptyCartMessage,
   HeaderItems,
   MinicartContainer,
   MiniCartFooter,
@@ -17,8 +16,6 @@ import {
   MinicartOverlay,
 } from "./MiniCart.styles";
 import { CartItem } from "../CartItem/CartItem";
-import { EmptyCartIcon } from "../EmptyCartIcon/EmptyCartIcon";
-import { Button } from "../ActionButton/ActionButton.styles";
 import { EmptyCartMessage } from "../EmptyCartMessage/EmptyCartMessage";
 
 export const MiniCart = () => {
@@ -49,23 +46,8 @@ export const MiniCart = () => {
           </HeaderItems>
         </MinicartHeader>
         {cart.length === 0 ? (
-          // <EmptyCartMessage>
-          //   <EmptyCartIcon />
-          //   <p>Your cart is Empty</p>
-          //   <Button
-          //     as={Link}
-          //     to={"/products/all"}
-          //     marginTop="0"
-          //     height="4rem"
-          //     width="12rem"
-          //     borderColor="rgb(214, 40, 40)"
-          //   >
-          //     go to shop
-          //   </Button>
-          // </EmptyCartMessage>
           <EmptyCartMessage pathname={pathname} />
         ) : (
-          // <EmptyCartMessage pathname={pathname} />
           <MiniCartItems>
             {cart.map((item) => {
               return <CartItem key={item.id} {...item} />;

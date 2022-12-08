@@ -20,7 +20,7 @@ export const Cart = () => {
   const { pathname } = useLocation();
   const navigate = useNavigate();
   const {
-    state: { cart, cartIsOpen },
+    state: { cart },
   } = useGlobalContext();
 
   const [parent] = useAutoAnimate<HTMLUListElement>();
