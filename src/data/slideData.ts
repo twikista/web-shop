@@ -19,7 +19,7 @@ export const sliderData: slideType[] = [
   {
     id: 2,
     image: "https://i.ibb.co/bNm15DK/lady-standing.png",
-    alt: "",
+    alt: "picture of lady standing",
     title: "flash sales",
     desc: "best quality products at lowest prices ever",
     bg: "white",
@@ -28,7 +28,7 @@ export const sliderData: slideType[] = [
     id: 3,
     // image: "https://i.ibb.co/dGks6nh/slider-Img04.png.png",
     image: "https://i.ibb.co/Wp4NHpK/lady-with-hat.png",
-    alt: "",
+    alt: "picture of lady on hat",
     title: "up your style",
     desc: "Access the largest collection of top fashion brands with a few clicks!",
     bg: "white",
@@ -36,7 +36,7 @@ export const sliderData: slideType[] = [
   {
     id: 4,
     image: "https://i.ibb.co/Z6938FP/jewelry-box-02.png",
-    alt: "",
+    alt: "picture of jewelry box",
     title: "Luxury Jewelries",
     desc: "there is something for every occassion. we got your back",
     bg: "white",
@@ -44,7 +44,7 @@ export const sliderData: slideType[] = [
   {
     id: 5,
     image: "https://i.ibb.co/hRvjDgG/electronics-01.png",
-    alt: "",
+    alt: "picture of home electronics",
     title: " smart gadgets",
     desc: "best quality products at lowest prices ever",
     bg: "white",
