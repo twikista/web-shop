@@ -57,7 +57,6 @@ export const GlobalContextProvider = ({ children }: ContextProviderProps) => {
 
   useEffect(() => {
     dispatch(updateCartTotals());
-    console.log("cart total ran");
   }, [state.cart]);
 
   return (

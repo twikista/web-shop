@@ -30,9 +30,8 @@ Hanadle data fetch error
     return { ...state, url: action.payload };
   }
   if (action.type === "ADD ITEM") {
-    console.log("clicked", state.cart);
     const { id, quantity: quanty, price } = action.payload;
-    console.log(action.payload);
+    
     if (state.cart.find((item) => item.id === id) === undefined) {
       return {
         ...state,
@@ -86,7 +85,7 @@ Hanadle data fetch error
       },
       { quantityTotal: 0, priceTotal: 0 }
     );
-    console.log(quantityTotal, priceTotal);
+  
     return {
       ...state,
       totalCartQuantity: quantityTotal,
@@ -94,8 +93,7 @@ Hanadle data fetch error
     };
   }
   if (action.type === "TOGGLE CART") {
-    console.log(!state.cartIsOpen);
-    console.log(action.payload);
+    
     return {
       ...state,
       cartIsOpen: !state.cartIsOpen,

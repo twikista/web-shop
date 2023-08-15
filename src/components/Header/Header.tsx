@@ -14,7 +14,6 @@ import { useLocation } from "react-router-dom";
 export const Header = () => {
   const { pathname } = useLocation();
 
-  console.log(pathname);
   return (
     <HeaderWrapper path={pathname}>
       <HeaderTop>
